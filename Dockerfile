@@ -17,6 +17,7 @@ RUN FORGE_URL="http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.
     rm installer.jar
 ADD minecraft_start_script.sh /usr/bin/minecraft_start_script
 RUN sed -i "s#__FORGE_VERSION__#$FORGE_VERSION#" /usr/bin/minecraft_start_script
+RUN rm /srv/minecraft/server-icon.png
 RUN chmod +x /usr/bin/minecraft_start_script
 COPY rconc_${TARGETARCH} /usr/bin/rconc
 ENTRYPOINT [ "/usr/bin/minecraft_start_script" ]

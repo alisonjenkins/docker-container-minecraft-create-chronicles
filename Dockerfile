@@ -2,7 +2,7 @@ FROM public.ecr.aws/amazoncorretto/amazoncorretto:21
 ARG FORGE_VERSION="47.4.0"
 ARG PACK_VERSION="2.5.2"
 ARG TARGETARCH
-RUN curl -L "https://mediafilez.forgecdn.net/files/6436/590/Create%20Chronicles%20Bosses%20and%20Beyond-$PACK_VERSION.zip" -o /tmp/server.zip && \
+RUN curl -L "https://mediafilez.forgecdn.net/files/6436/594/Create%20Chronicles%20Bosses%20and%20Beyond%20SERVERv$PACK_VERSION.zip" -o /tmp/server.zip && \
     yum install -y unzip && \
     mkdir -p /srv/minecraft/ && \
     cd /srv/minecraft/ && \

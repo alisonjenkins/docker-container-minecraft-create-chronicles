@@ -15,7 +15,7 @@ trap sigterm_handler SIGTERM
 cd /srv/minecraft || exit 1
 
 # shellcheck disable=2086
-java $JAVA_ARGS @libraries/net/minecraftforge/forge/1.20.1-47.2.20/unix_args.txt nogui &
+java $JAVA_ARGS @libraries/net/minecraftforge/forge/1.20.1-__FORGE_VERSION__/unix_args.txt nogui &
 
 echo "$!" >/tmp/minecraft.pid
 
